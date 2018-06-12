@@ -1,6 +1,6 @@
 ---
 document: modulemd
-version: 2
+version: 1
 data:
     name: jdk-11
     stream: 11
@@ -13,10 +13,11 @@ data:
         module:
             - MIT
     dependencies:
-        - buildrequires:
-            jdk-10: [20180612]
-          requires:
-            platform: [f28]
+        buildrequires:
+          platform: f28
+          jdk-10: 10
+        requires:
+          platform: f28
     references:
         documentation: http://openjdk.java.net/
     profiles:
