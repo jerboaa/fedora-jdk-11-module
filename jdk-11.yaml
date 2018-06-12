@@ -4,7 +4,7 @@ version: 1
 data:
     name: jdk-11
     stream: 11
-    version: 20180612
+    version: 20180613
     summary: OpenJDK 11
     description: >-
         JDK 11 is the open-source reference implementation of the Java
