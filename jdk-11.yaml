@@ -1,0 +1,41 @@
+---
+document: modulemd
+version: 2
+data:
+    name: jdk-11
+    stream: 11
+    version: 20180612
+    summary: OpenJDK 11
+    description: >-
+        JDK 11 is the open-source reference implementation of the Java
+        SE 11 Platform as defined by JSR 384 in the Java Community Process.
+    license:
+        module:
+            - MIT
+    dependencies:
+        - buildrequires:
+            platform: [f28]
+          requires:
+            platform: [f28]
+    references:
+        documentation: http://openjdk.java.net/
+    profiles:
+        default:
+            rpms:
+                - java-11-openjdk-devel
+        minimal:
+            rpms:
+                - java-11-openjdk-headless
+        # A set of packages which should be installed into the buildroot of a
+        # module which depends on this module.  Specifically, it is used to
+        # flesh out the build group in koji.
+        buildroot:
+            rpms:
+                - java-11-openjdk-devel
+    components:
+        rpms:
+            java-11-openjdk:
+                rationale: OpenJDK 11 package.
+                repository: http://copr-dist-git.fedorainfracloud.org/git/jerboaa/openjdk-11/java-11-openjdk.git
+                # Build from branch f28
+                ref: f28
