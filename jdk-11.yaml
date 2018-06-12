@@ -14,7 +14,7 @@ data:
             - MIT
     dependencies:
         - buildrequires:
-            platform: [f28]
+            jdk-10: [20180612]
           requires:
             platform: [f28]
     references:
